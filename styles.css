@@ -59,7 +59,7 @@ img { display: block; max-width: 100%; }
 
 .hero { position: relative; min-height: clamp(620px, calc(100svh - 76px), 820px); padding: 0; overflow: hidden; }
 .hero::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(180deg, rgba(6,56,24,.02) 0%, rgba(6,56,24,0) 62%, rgba(6,56,24,.28) 100%); }
-.hero-grid { position: relative; z-index: 2; display: flex; align-items: flex-start; min-height: inherit; }
+.hero-grid { position: relative; z-index: 2; display: flex; align-items: flex-start; min-height: inherit; isolation: isolate; }
 .hero-copy { position: relative; z-index: 2; width: min(100%, 650px); padding: 64px 0 48px; }
 .hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 20px; color: var(--green-950); font-size: 14px; font-weight: 900; letter-spacing: .08em; line-height: 1.2; text-transform: uppercase; }
 .hero-eyebrow span { width: 36px; height: 4px; border-radius: 5px; background: var(--lime-500); transform: rotate(-2deg); }
@@ -172,6 +172,7 @@ details p { max-width: 650px; margin: -5px 42px 20px 0; color: var(--graphite); 
   .menu-toggle { display: block; }
   .hero { min-height: calc(100svh - 68px); }
   .hero-grid { padding-bottom: 0; }
+  .hero-grid::before { content: ""; position: absolute; inset: 0 auto 0 -16px; z-index: 0; width: min(52vw, calc(100% + 16px)); border-radius: 0 32px 32px 0; background: linear-gradient(90deg, rgba(250,247,241,.96) 0%, rgba(250,247,241,.88) 68%, rgba(250,247,241,.28) 100%); -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); pointer-events: none; }
   .hero-copy { width: min(52%, 650px); padding: 42px 0 40px; }
   .hero-text { max-width: 100%; }
   .hero-benefits { gap: 14px; }
@@ -193,6 +194,7 @@ details p { max-width: 650px; margin: -5px 42px 20px 0; color: var(--graphite); 
   .site-header .brand, .brand-logo { width: 92px; height: 54px; }
   h1 { font-size: clamp(49px, 14vw, 68px); }
   .hero-copy { width: min(100%, 420px); padding: 30px 0 30px; }
+  .hero-grid::before { width: calc(100% + 16px); border-radius: 0 28px 28px 0; background: linear-gradient(90deg, rgba(250,247,241,.97) 0%, rgba(250,247,241,.88) 72%, rgba(250,247,241,.34) 100%); }
   .hero-title { font-size: clamp(47px, 13vw, 68px); }
   .hero-title-line { padding: 7px 12px 9px; }
   .hero-eyebrow { font-size: 11px; }

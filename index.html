@@ -11,7 +11,10 @@
     <meta property="og:type" content="website" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" /></noscript>
+    <link rel="preload" as="image" href="hero-lata.webp" type="image/webp" imagesrcset="hero-lata-828.webp 828w, hero-lata.webp 1672w" imagesizes="100vw" fetchpriority="high" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
     <link rel="apple-touch-icon" href="favicon.png" />
     <link rel="stylesheet" href="styles.css" />
@@ -34,7 +37,7 @@
     <header class="site-header" data-header>
       <div class="container header-inner">
         <a class="brand" href="#inicio" aria-label="Entulho Fácil — início">
-          <img class="brand-logo" src="logo.png" alt="Entulho Fácil" width="1254" height="1254" decoding="async" />
+          <picture class="brand-picture"><source srcset="logo-320.webp 320w, logo-640.webp 640w, logo.webp 1254w" sizes="118px" type="image/webp" /><img class="brand-logo" src="logo.png" alt="Entulho Fácil" width="1254" height="1254" decoding="async" /></picture>
         </a>
 
         <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
@@ -61,7 +64,7 @@
       <section class="hero section-paper" id="inicio">
         <div class="hero-visual-wrap">
           <picture>
-            <source srcset="hero-lata.webp" type="image/webp" />
+            <source srcset="hero-lata-828.webp 828w, hero-lata.webp 1672w" sizes="100vw" type="image/webp" />
             <img class="hero-visual" src="hero-lata.png" alt="Tambor verde cheio de entulho em uma obra" width="1672" height="941" fetchpriority="high" decoding="async" />
           </picture>
         </div>
@@ -165,10 +168,10 @@
           </div>
 
           <div class="audience-grid">
-            <article class="audience-card"><picture class="audience-media"><source srcset="reformas.webp" type="image/webp" /><img class="audience-image" src="reformas.png" alt="Tambor de entulho em uma reforma residencial" width="1254" height="1254" loading="lazy" decoding="async" /></picture><h3>Reformas residenciais</h3><p>Da pequena reforma à grande mudança.</p></article>
-            <article class="audience-card"><picture class="audience-media"><source srcset="obras.webp" type="image/webp" /><img class="audience-image" src="obras.png" alt="Tambor de entulho em um canteiro de obras" width="1254" height="1254" loading="lazy" decoding="async" /></picture><h3>Obras</h3><p>Mais organização no canteiro de obras.</p></article>
-            <article class="audience-card"><picture class="audience-media"><source srcset="condominios.webp" type="image/webp" /><img class="audience-image" src="condominios.png" alt="Tambor de entulho em um condomínio" width="1254" height="1254" loading="lazy" decoding="async" /></picture><h3>Condomínios</h3><p>Solução prática e sem dor de cabeça.</p></article>
-            <article class="audience-card"><picture class="audience-media"><source srcset="comercios.webp" type="image/webp" /><img class="audience-image" src="comercios.png" alt="Tambor de entulho em frente a um comércio" width="1254" height="1254" loading="lazy" decoding="async" /></picture><h3>Comércios</h3><p>Seu negócio sempre limpo e em ordem.</p></article>
+            <article class="audience-card"><picture class="audience-media"><source srcset="reformas-480.webp 480w, reformas-720.webp 720w, reformas.webp 1254w" sizes="(max-width: 899px) 50vw, 25vw" type="image/webp" /><img class="audience-image" src="reformas.png" alt="Tambor de entulho em uma reforma residencial" width="720" height="548" loading="lazy" decoding="async" /></picture><h3>Reformas residenciais</h3><p>Da pequena reforma à grande mudança.</p></article>
+            <article class="audience-card"><picture class="audience-media"><source srcset="obras-480.webp 480w, obras-720.webp 720w, obras.webp 1254w" sizes="(max-width: 899px) 50vw, 25vw" type="image/webp" /><img class="audience-image" src="obras.png" alt="Tambor de entulho em um canteiro de obras" width="720" height="548" loading="lazy" decoding="async" /></picture><h3>Obras</h3><p>Mais organização no canteiro de obras.</p></article>
+            <article class="audience-card"><picture class="audience-media"><source srcset="condominios-480.webp 480w, condominios-720.webp 720w, condominios.webp 1254w" sizes="(max-width: 899px) 50vw, 25vw" type="image/webp" /><img class="audience-image" src="condominios.png" alt="Tambor de entulho em um condomínio" width="720" height="548" loading="lazy" decoding="async" /></picture><h3>Condomínios</h3><p>Solução prática e sem dor de cabeça.</p></article>
+            <article class="audience-card"><picture class="audience-media"><source srcset="comercios-480.webp 480w, comercios-720.webp 720w, comercios.webp 1254w" sizes="(max-width: 899px) 50vw, 25vw" type="image/webp" /><img class="audience-image" src="comercios.png" alt="Tambor de entulho em frente a um comércio" width="720" height="548" loading="lazy" decoding="async" /></picture><h3>Comércios</h3><p>Seu negócio sempre limpo e em ordem.</p></article>
           </div>
         </div>
       </section>
@@ -204,7 +207,7 @@
 
     <footer class="site-footer">
       <div class="container footer-grid">
-        <div><a class="footer-logo-link" href="#inicio" aria-label="Entulho Fácil — início"><img class="footer-logo" src="logo.png" alt="Entulho Fácil" width="1254" height="1254" loading="lazy" decoding="async" /></a><p><strong>Retirada de Entulho Piracicaba</strong><br />Empresa de Coleta de Entulho.</p></div>
+        <div><a class="footer-logo-link" href="#inicio" aria-label="Entulho Fácil — início"><picture class="footer-logo-picture"><source srcset="logo-320.webp 320w, logo-640.webp 640w, logo.webp 1254w" sizes="190px" type="image/webp" /><img class="footer-logo" src="logo.png" alt="Entulho Fácil" width="1254" height="1254" loading="lazy" decoding="async" /></picture></a><p><strong>Retirada de Entulho Piracicaba</strong><br />Empresa de Coleta de Entulho.</p></div>
         <div><h3>Explore</h3><a href="#como-funciona">Como funciona</a><a href="#atendimento">Atendimento</a><a href="#duvidas">Dúvidas</a></div>
         <div><h3>Fale com a gente</h3><a href="tel:+5519978083303">(19) 97808-3303</a><a href="https://wa.me/5519978083303" target="_blank" rel="noopener noreferrer">WhatsApp</a><a href="#atendimento">Piracicaba e proximidades</a><span>Aberto 24 horas</span><a href="https://www.google.com/search?kgmid=/g/11zyvpp_vr&amp;q=Retirada+de+Entulho+Piracicaba+-+Entulho+F%C3%A1cil" target="_blank" rel="noopener noreferrer">3 avaliações no Google</a></div>
       </div>
